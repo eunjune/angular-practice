@@ -1,3 +1,5 @@
+/* index.html 받았을 때 가장 먼저 실행되는 파일*/
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
