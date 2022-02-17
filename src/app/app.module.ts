@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {HelloComponent} from "./hello/hello.component";
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SectionComponent } from './section/section.component';
+import { TimeDisplayComponent } from './section/time-display/time-display.component';
+import { ButtonsComponent } from './section/buttons/buttons.component';
 
 /*
 * 데코레이터 : 클래스를 모듈로 만들어줌
@@ -11,7 +16,12 @@ import {HelloComponent} from "./hello/hello.component";
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    HeaderComponent,
+    FooterComponent,
+    SectionComponent,
+    TimeDisplayComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule
