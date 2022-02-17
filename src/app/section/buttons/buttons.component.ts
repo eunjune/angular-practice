@@ -15,13 +15,8 @@ export class ButtonsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  start() {
+  executeButton(command:string) {
     // 자식 컴포넌트에서 부모 컴포넌트로 전달
-    this.clickEvent.emit('changes');
+    this.clickEvent.emit(command);
   }
-
-  test ($event:MouseEvent) {
-    console.log('test');
-  }
-
 }

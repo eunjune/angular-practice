@@ -9,7 +9,13 @@ export class TimeDisplayComponent implements OnInit {
 
   test = 1;
 
+  min: number = 0
+  sec: number = 0
+  ms: number = 0
+
   @Input() inputData: string | undefined;
+
+  timeInterval: any;
 
   constructor() {
     console.log(this.inputData);
@@ -19,10 +25,39 @@ export class TimeDisplayComponent implements OnInit {
 
   }
 
+  timeStart() {
+    this.timeInterval = setInterval(() => {
+      this.ms++;
+    },10)
+  }
+
+  timeStop() {
+    clearInterval(this.timeInterval);
+  }
+
+  timeReset() {
+    this.timeStop();
+    this.ms=0;
+  }
+
   // 부모 컴포넌트와 연결
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
+    for(let propName in changes) {
+      if(propName == 'inputData') {
 
+        switch (changes[propName].currentValue) {
+          case 'start':
+            this.timeStart();
+            break;
+          case 'stop':
+            this.timeStop();
+            break;
+          case 'reset':
+            this.timeReset();
+            break;
+        }
+      }
+    }
   }
 
 }
