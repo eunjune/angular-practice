@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
-  count = 0;
+  // 컴포넌트 이벤트를 발생시킬 수 있는
+  @Output() clickEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -15,7 +16,8 @@ export class ButtonsComponent implements OnInit {
   }
 
   start() {
-    this.count++;
+    // 자식 컴포넌트에서 부모 컴포넌트로 전달
+    this.clickEvent.emit('changes');
   }
 
   test ($event:MouseEvent) {
