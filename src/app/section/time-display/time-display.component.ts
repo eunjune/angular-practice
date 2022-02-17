@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimeDisplayComponent implements OnInit {
 
-  constructor() { }
+  test = 1;
+
+  constructor() {
+    setInterval(() => {
+      this.test++;
+    }, 1000)
+
+  }
 
   ngOnInit(): void {
+
+
+
   }
 
 }
