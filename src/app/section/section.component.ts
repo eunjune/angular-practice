@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section.component.scss']
 })
 export class SectionComponent implements OnInit {
-  present: string = '';
 
   constructor() { }
 
@@ -14,6 +13,5 @@ export class SectionComponent implements OnInit {
   }
 
   startTime(time:string) {
-    this.present = time;
   }
 }

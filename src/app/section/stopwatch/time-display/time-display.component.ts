@@ -41,7 +41,7 @@ export class TimeDisplayComponent implements OnInit {
   }
 
   // 부모 컴포넌트와 연결
-  ngOnChanges(changes: SimpleChanges) {
+/*  ngOnChanges(changes: SimpleChanges) {
     for(let propName in changes) {
       if(propName == 'inputData') {
 
@@ -58,6 +58,6 @@ export class TimeDisplayComponent implements OnInit {
         }
       }
     }
-  }
+  }*/
 
 }
