@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {LayoutModule} from "./layout/layout.module";
 import {SectionModule} from "./section/section.module";
+import {AppRoutingModule} from "./app-routing.module";
 
 /*
 * 데코레이터 : 클래스를 모듈로 만들어줌
@@ -17,6 +18,7 @@ import {SectionModule} from "./section/section.module";
 
   imports: [
     BrowserModule,
+    AppRoutingModule,
     LayoutModule,
     SectionModule
   ],
