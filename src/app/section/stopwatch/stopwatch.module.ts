@@ -5,8 +5,6 @@ import {ButtonsComponent} from "./buttons/buttons.component";
 import {StopwatchComponent} from "./stopwatch.component";
 import {Router, RouterModule} from "@angular/router";
 
-
-
 @NgModule({
   declarations: [
     TimeDisplayComponent,
@@ -20,6 +18,8 @@ import {Router, RouterModule} from "@angular/router";
   imports: [
     CommonModule,
     RouterModule
+  ],
+  providers: [
   ]
 })
 export class StopwatchModule { }
