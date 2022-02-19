@@ -23,13 +23,20 @@ export class TimeDisplayComponent implements OnInit {
   ) {
   }
 
-  ngOnInit(): void {
-
-  }
-
   timeStart() {
     this.timeStop();
     this.timeInterval = setInterval(() => {
+
+      if(this.ms >= 100) {
+        this.ms = 0;
+        this.sec++;
+      }
+
+      if(this.sec >= 60) {
+        this.sec = 0;
+        this.min++;
+      }
+
       this.ms++;
     },10)
   }
@@ -41,6 +48,8 @@ export class TimeDisplayComponent implements OnInit {
   timeReset() {
     this.timeStop();
     this.ms=0;
+    this.sec=0;
+    this.min=0;
   }
 
   // 부모 컴포넌트와 연결
@@ -62,5 +71,44 @@ export class TimeDisplayComponent implements OnInit {
       }
     }
   }*/
+
+  // 컴포넌트 속성 변경 감지
+  ngOnChanges() {
+
+  }
+
+  // 컴포넌트 생성시(constructor). 한번만 호출
+  ngOnInit() {
+
+  }
+
+  // 컴포넌트 변화 감지
+  ngDoCheck() {
+
+  }
+
+  // 컴포넌트 태그 내의 컨텐츠들
+  ngAfterContentInit() {
+
+  }
+
+  ngAfterContentChecked() {
+
+  }
+
+  // 컴포넌트 태그 랜더링
+  ngAfterViewInit() {
+
+  }
+
+  ngAfterViewChecked() {
+
+  }
+
+  // 컴포넌트
+  ngOnDestroy() {
+
+  }
+
 
 }
